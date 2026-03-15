@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เช็คชื่อนักเรียน ป.4 | วิชาวิทยาศาสตร์</title>
+    <meta name="description" content="ระบบเช็คชื่อนักเรียนชั้นประถมศึกษาปีที่ 4 สำหรับวิชาวิทยาศาสตร์ ใช้งานง่ายและทันสมัย">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <div class="header-content">
+                <img src="cartoon_boy.png" alt="Boy Scientist" class="cartoon-header left">
+                <div class="title-section">
+                    <h1>เช็คชื่อวิชาวิทยาศาสตร์</h1>
+                    <p class="subtitle">ชั้นประถมศึกษาปีที่ 4</p>
+                </div>
+                <img src="cartoon_girl.png" alt="Girl Scientist" class="cartoon-header right">
+                <div class="date-section">
+                    <span id="current-date">--/--/----</span>
+                    <span id="current-time">00:00:00</span>
+                </div>
+            </div>
+        </header>
+
+        <img src="atom.png" alt="Atom" class="floating-atom">
+
+        <section class="stats-dashboard">
+            <div class="stat-card">
+                <span class="stat-label">มาเรียน</span>
+                <span id="present-count" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">ขาดเรียน</span>
+                <span id="absent-count" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">สาย</span>
+                <span id="late-count" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">ทั้งหมด</span>
+                <span id="total-count" class="stat-value">0</span>
+            </div>
+        </section>
+
+        <main>
+            <div class="table-controls">
+                <input type="text" id="student-search" placeholder="ค้นหาชื่อนักเรียน...">
+                <button id="export-btn" class="primary-btn">ส่งออกเป็น CSV</button>
+            </div>
+            <div class="table-wrapper">
+                <table id="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>เลขที่</th>
+                            <th>ชื่อ-นามสกุล</th>
+                            <th>สถานะการเข้าเรียน</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-list">
+                        <!-- Student rows will be injected here by script.js -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2026 ระบบเช็คชื่อวิทยาศาสตร์ ป.4 - ออกแบบโดย AI</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
